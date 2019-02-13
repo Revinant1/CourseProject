@@ -1,9 +1,9 @@
-var gulp = require('gulp'),
-    uglify = require('gulp-uglify'),
-    concat = require('gulp-concat'),
-    imagemin = require('gulp-imagemin'),
-    csso = require('gulp-csso'),
-    sass = require('gulp-sass');
+var gulp = require('gulp');
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
+var imagemin = require('gulp-imagemin');
+var csso = require('gulp-csso');
+var sass = require('gulp-sass');
 
 
 
@@ -17,7 +17,7 @@ gulp.task('sass', function () {
 
 
 gulp.task('js', function() {
-    return gulp.src(['./js/skript.js'])
+    return gulp.src(['./js/**/*.js'])
         .pipe(concat('min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./public/js/'))
